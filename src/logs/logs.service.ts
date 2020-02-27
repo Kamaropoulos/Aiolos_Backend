@@ -18,6 +18,7 @@ export class LogsService {
         const storedLog = new this.logsModel({
             drone_id: data["id"],
             gprmc: data["GPRMC"],
+            gps_data: data["gps_data"],
             sensorReadings: data["sensorReadings"]
         });
         let id = await storedLog.save();
